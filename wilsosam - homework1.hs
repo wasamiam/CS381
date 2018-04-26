@@ -46,6 +46,6 @@ data Exp = Num Int
 exp3a = Apply Negate [ Apply Multiply [ Apply Add [ Num 3, Num 4 ], Num 7 ] ]
 
 -- 3(b):
--- The alternate form seems more readable for me.
+-- The alternate form seems more readable for me and it allows for preforming operations on more than two Nums at a time.
 
 -- 3(c):
