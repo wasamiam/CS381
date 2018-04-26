@@ -1,4 +1,4 @@
--- Samuel Wilson - OSUID: wilsosam
+-- Samuel Wilson - OSID: wilsosam
 
 module MiniLogo where
 
@@ -30,8 +30,22 @@ vector = Def "vector" [x1, y1, x2, y2] (Comb (Comb (Comb (Pen Up) (Moveto (S x1)
 
 -- 2(a):
 data Circut = Cir Gates Links
-type Gates = [(Int, Gate)]
-data Gate = And | Or | Xor | Not
+type Gates = [(Int, GateFn)]
+data GateFn = And | Or | Xor | Not
 type Links = [(Int, Int, Int, Int)]
 
 -- 2(b):
+circut2b = Cir [(1, Xor),(2, And)] [(1,1,2,1),(1,2,2,2)]
+
+-- 2(c):
+-- 3(a):
+data Op = Add | Multiply | Negate
+data Exp = Num Int
+         | Apply Op [Exp]
+
+exp3a = Apply Negate [ Apply Multiply [ Apply Add [ Num 3, Num 4 ], Num 7 ] ]
+
+-- 3(b):
+-- The alternate form seems more readable for me.
+
+-- 3(c):
