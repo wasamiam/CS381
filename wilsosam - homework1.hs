@@ -39,6 +39,8 @@ type Links = [(Int, Int, Int, Int)]
 circut2b = Cir [(1, Xor),(2, And)] [(1,1,2,1),(1,2,2,2)]
 
 -- 2(c):
+--pp :: Circut -> String
+--pp 
 
 -- 3(a):
 data Expr = N Int
