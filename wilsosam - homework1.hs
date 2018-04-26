@@ -1,6 +1,6 @@
 -- Samuel Wilson - OSID: wilsosam
 
-module MiniLogo where
+module HMW1 where
 
 -- 1(a):
 data Cmd = Pen Mode
